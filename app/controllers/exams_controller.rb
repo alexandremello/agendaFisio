@@ -13,6 +13,7 @@ class ExamsController < ApplicationController
   # GET /exams/1
   # GET /exams/1.json
   def show
+    @patient = Patient.find(params[:patient_id])
     @exam = Exam.find(params[:id])
 
     respond_to do |format|
@@ -47,7 +48,7 @@ class ExamsController < ApplicationController
 
     respond_to do |format|
       if @exam.save
-        format.html { redirect_to @exam, notice: 'Exam was successfully created.' }
+        format.html { redirect_to patient_exam_path(@patient, @exam), notice: 'Exam was successfully created.' }
         format.json { render json: @exam, status: :created, location: @exam }
       else
         format.html { render action: "new" }
@@ -63,7 +64,7 @@ class ExamsController < ApplicationController
 
     respond_to do |format|
       if @exam.update_attributes(params[:exam])
-        format.html { redirect_to @exam, notice: 'Exam was successfully updated.' }
+        format.html { redirect_to patient_exam_path(@exam.patient, @exam), notice: 'Exam was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
