@@ -1,5 +1,9 @@
 AgendaFisio::Application.routes.draw do
-  resources :patients
+  resources :exams
+
+  resources :patients do
+    resources :exams
+  end
 
   root to:'patients#index'
 
