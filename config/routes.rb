@@ -1,5 +1,5 @@
 AgendaFisio::Application.routes.draw do
-  resources :exams
+  resources :exams, only: :index
 
   resources :patients do
     resources :exams
