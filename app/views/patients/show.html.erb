@@ -15,6 +15,20 @@
   <%= @patient.address %>
 </p>
 
+<table class="table">
+  <tr>
+    <td>Exam</td>
+    <td>Description</td>
+  </tr>
+
+  <% @patient.exams.each do |exam| %>
+    <tr>
+      <td><%= link_to  exam.date, edit_patient_exam_path(@patient, exam) %></td>
+      <td><%= exam.description %></td>
+    </tr>
+  <% end %>
+</table>
+
 <p>
   <%= link_to 'New Exam', new_patient_exam_path(@patient) %>
 </p>
