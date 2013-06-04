@@ -1,4 +1,7 @@
 AgendaFisio::Application.routes.draw do
+  resources :patients
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
