@@ -1,4 +1,6 @@
 AgendaFisio::Application.routes.draw do
+  devise_for :users
+
   resources :exams, only: :index
 
   resources :patients do
