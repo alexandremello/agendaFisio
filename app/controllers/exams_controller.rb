@@ -24,6 +24,7 @@ class ExamsController < ApplicationController
   # GET /exams/new
   # GET /exams/new.json
   def new
+    @patient = Patient.find(params[:patient_id])
     @exam = Exam.new
 
     respond_to do |format|
@@ -34,13 +35,15 @@ class ExamsController < ApplicationController
 
   # GET /exams/1/edit
   def edit
+    @patient = Patient.find(params[:patient_id])
     @exam = Exam.find(params[:id])
   end
 
   # POST /exams
   # POST /exams.json
   def create
-    @exam = Exam.new(params[:exam])
+    @patient = Patient.find(params[:patient_id])
+    @exam = @patient.exams.new(params[:exam])
 
     respond_to do |format|
       if @exam.save

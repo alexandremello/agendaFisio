@@ -15,6 +15,9 @@
   <%= @patient.address %>
 </p>
 
+<p>
+  <%= link_to 'New Exam', new_patient_exam_path(@patient) %>
+</p>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
