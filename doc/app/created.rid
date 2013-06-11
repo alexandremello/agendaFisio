@@ -1,0 +1,13 @@
+Mon, 10 Jun 2013 11:19:35 -0300
+doc/README_FOR_APP	Mon, 03 Jun 2013 21:21:15 -0300
+app/controllers/application_controller.rb	Mon, 03 Jun 2013 21:21:15 -0300
+app/controllers/appointments_controller.rb	Fri, 07 Jun 2013 11:38:57 -0300
+app/controllers/exams_controller.rb	Thu, 06 Jun 2013 17:47:57 -0300
+app/controllers/patients_controller.rb	Mon, 03 Jun 2013 21:44:08 -0300
+app/helpers/application_helper.rb	Mon, 03 Jun 2013 21:21:15 -0300
+app/helpers/appointments_helper.rb	Fri, 07 Jun 2013 10:42:55 -0300
+app/helpers/exams_helper.rb	Tue, 04 Jun 2013 04:01:53 -0300
+app/helpers/patients_helper.rb	Mon, 03 Jun 2013 21:44:08 -0300
+app/models/appointment.rb	Fri, 07 Jun 2013 10:49:07 -0300
+app/models/exam.rb	Thu, 06 Jun 2013 17:17:17 -0300
+app/models/patient.rb	Fri, 07 Jun 2013 11:03:12 -0300

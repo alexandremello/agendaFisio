@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  start: 2013-06-10 11:45:16
+  end: 2013-06-10 11:45:16
+  title: MyString
+  description: MyText
+  allDay: false
+  patient_id: 1
+  canceled: false
+  attended: false
+
+two:
+  start: 2013-06-10 11:45:16
+  end: 2013-06-10 11:45:16
+  title: MyString
+  description: MyText
+  allDay: false
+  patient_id: 1
+  canceled: false
+  attended: false
