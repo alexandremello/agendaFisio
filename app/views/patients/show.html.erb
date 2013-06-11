@@ -23,7 +23,7 @@
 
   <% @patient.exams.each do |exam| %>
     <tr>
-      <td><%= link_to  exam.date, edit_patient_exam_path(@patient, exam) %></td>
+      <td><%= link_to  exam.date, patient_exam_path(@patient, exam) %></td>
       <td><%= exam.description %></td>
     </tr>
   <% end %>
@@ -31,6 +31,9 @@
 
 <p>
   <%= link_to 'New Exam', new_patient_exam_path(@patient) %>
+</p>
+<p>
+  <%= link_to 'New Appointment', new_patient_appointment_path(@patient) %>
 </p>
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |

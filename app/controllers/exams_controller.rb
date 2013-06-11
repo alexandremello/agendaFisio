@@ -61,7 +61,7 @@ class ExamsController < ApplicationController
   # PUT /exams/1.json
   def update
     @exam = Exam.find(params[:id])
-    @patient = @exam.patient
+    #@patient = @exam.patient
 
     respond_to do |format|
       if @exam.update_attributes(params[:exam])

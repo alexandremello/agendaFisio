@@ -5,6 +5,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:db/development.sqlite3</jdbc-url>
       <user-name>agendaFisioDev</user-name>
+      <user-password>dfd8dfcbdfc3dfc6dfd9</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
@@ -18,6 +19,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:agendaFisio</jdbc-url>
       <user-name>agendaFisio</user-name>
+      <user-password>dfd8dfcbdfc3dfc6dfd9</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>
@@ -31,6 +33,7 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql:db/test.sqlite3</jdbc-url>
       <user-name>agendaFisioTeste</user-name>
+      <user-password>dfd8dfcbdfc3dfc6dfd9</user-password>
       <libraries>
         <library>
           <url>file://$USER_HOME$/Library/Preferences/RubyMine50/jdbc-drivers/postgresql-driver-license.txt</url>

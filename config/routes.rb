@@ -1,13 +1,17 @@
 AgendaFisio::Application.routes.draw do
-  devise_for :users
+  resources :appointments
+
+
+  resources :appointments
 
   resources :exams, only: :index
 
   resources :patients do
     resources :exams
+	  resources :appointments
   end
 
-  root to:'patients#index'
+  root to:'appointments#index'
 
 
   # The priority is based upon order of creation:

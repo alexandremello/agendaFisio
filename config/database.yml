@@ -7,7 +7,7 @@ development:
   adapter: postgresql
   database: agendaFisioDev
   username: agendaFisioDev
-  password:
+  password: rails
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -17,12 +17,12 @@ test:
   adapter: postgresql
   database: agendaTeste
   username: agendaFisioTeste
-  password:
+  password: rails
   host: localhost
 
 production:
   adapter: postgresql
   database: agendaFisio
   username: agendaFisio
-  password:
+  password: rails
   host: localhost
