@@ -21,19 +21,19 @@ class Appointment < ActiveRecord::Base
 	end
 
 	scope :between, lambda {|start_time, end_time|
-		{conditions: ['? < starts_at < ?',
+		{conditions => ['? < starts_at < ?',
 		                 Appointment.format_date(start_time) ,
 										 Appointment.format_date(end_time)]}
 	}
 
 	def as_json(options = {})
 		{
-				id:           self.id,
-		    title:        self.title,
-		    description:  self.description || '',
-		    start:        starts_at.rfc822,
-		    end:          ends_at.rfc822,
-		    allDay:       self.allDay
+				:id => self.id,
+		    :title => self.title,
+		    :description => self.description || '',
+		    :start => starts_at.rfc822,
+		    :end  => ends_at.rfc822,
+		    :allDay => self.allDay
 		}
 	end
 
