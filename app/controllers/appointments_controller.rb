@@ -1,10 +1,16 @@
 class AppointmentsController < ApplicationController
+	# before_filter :owns_appointment, except: [:show]
   # GET /appointments
   # GET /appointments.json
   def index
     #@appointments = Appointment.all
-		@appointments = Appointment.scoped
-		@appointments = Appointment.between(params['start'], params['end']) if (params['start'] && params['end'])
+		#@appointments = Appointment.scoped
+		@patient = current_user.patient_id
+		if @user.admin
+			@appointments = Appointment.between(params['start'], params['end']) if (params['start'] && params['end'])
+		else
+			@appointments = Appointment.betwee
+		end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -82,4 +88,12 @@ class AppointmentsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	private
+
+	def owns_appointment
+		if !user_signed_in? || current_user != Appointment.find(params[:id]).user
+			redirect_to appointments_path, error: "You cannot do that!"
+		end
+	end
 end

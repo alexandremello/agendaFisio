@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
-	has_many :patient
+	belongs_to :patient
 	has_many :appointments, through: :patient
 end
