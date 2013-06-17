@@ -3,9 +3,6 @@ AgendaFisio::Application.routes.draw do
 
   resources :appointments
 
-
-  resources :appointments
-
   resources :exams, only: :index
 
   resources :patients do
@@ -13,8 +10,9 @@ AgendaFisio::Application.routes.draw do
 	  resources :appointments
   end
 
-  root to:'appointments#index'
-
+  devise_scope :user do
+	  root to: "devise/sessions#new"
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -3,14 +3,10 @@ class AppointmentsController < ApplicationController
   # GET /appointments
   # GET /appointments.json
   def index
-    #@appointments = Appointment.all
+    @appointments = Appointment.all
 		#@appointments = Appointment.scoped
-		@patient = current_user.patient_id
-		if @user.admin
-			@appointments = Appointment.between(params['start'], params['end']) if (params['start'] && params['end'])
-		else
-			@appointments = Appointment.betwee
-		end
+		#@patient = current_user.patient_id
+		@appointments = Appointment.between(params['start'], params['end']) if (params['start'] && params['end'])
 
     respond_to do |format|
       format.html # index.html.erb

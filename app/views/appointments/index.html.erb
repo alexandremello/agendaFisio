@@ -1,15 +1,11 @@
 <h1>Listing appointments</h1>
 
-<table class="table">
+<table class="table table-hover">
   <tr>
     <th>Start</th>
     <th>End</th>
     <th>Title</th>
-    <th>Description</th>
-    <th>Allday</th>
     <th>Patient</th>
-    <th>Canceled</th>
-    <th>Attended</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,14 +13,10 @@
 
 <% @appointments.each do |appointment| %>
   <tr>
-    <td><%= appointment.start %></td>
-    <td><%= appointment.end %></td>
+    <td><%= appointment.start.strftime("%d/%m/%Y %H:%M") %></td>
+    <td><%= appointment.end.strftime("%d/%m/%Y %H:%M") %></td>
     <td><%= appointment.title %></td>
-    <td><%= appointment.description %></td>
-    <td><%= appointment.allDay %></td>
-    <td><%= appointment.patient_id %></td>
-    <td><%= appointment.canceled %></td>
-    <td><%= appointment.attended %></td>
+    <td><%= appointment.patient.name %></td>
     <td><%= link_to 'Show', appointment %></td>
     <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
     <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

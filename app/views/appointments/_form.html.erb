@@ -33,7 +33,14 @@
   </div>
   <div class="field">
     <%= f.label :patient_id %><br />
-    <%= f.number_field :patient_id %>
+    <%= collection_select(
+            :appointment,
+            :patient_id,
+            Patient.all,
+            :id,
+            :name,
+            :prompt => true
+        ) %>
   </div>
   <div class="field">
     <%= f.label :canceled %><br />
